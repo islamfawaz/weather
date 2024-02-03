@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+         -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css" />
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg  nav-color py-5">
+        <div class="container">
+            <a class="branding" href="">
+                <img src="img/photo1.png" alt="Weather" class="logo" width="64" height="38">
+
+                <div class="logo-type d-inline">
+                    <h1 class="d-inline text fs-5 ps-1">Weather</h1>
+                    <small class="site-description d-block ps-5 ms-4 ">tagline goes here</small>
+                </div>
+            </a> <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item mx-3 custom-border rounded-5 ">
+                        <a class="nav-link active text-white" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item mx-3">
+                        <a class="nav-link active text-white" aria-current="page" href="#">News</a>
+                    </li>
+                    <li class="nav-item mx-3">
+                        <a class="nav-link active text-white" aria-current="page" href="#">Lve cameras</a>
+                    </li>
+                    <li class="nav-item mx-3">
+                        <a class="nav-link active text-white" aria-current="page" href="#">Photos</a>
+                    </li>
+                    <li class="nav-item mx-3">
+                        <a class="nav-link active text-white" aria-current="page" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <header>
+        <div class="container ">
+            <div class="ex d-flex justify-content-center align-items-center">
+                <input type="text" placeholder="Find your location" id="inputLocation"
+                    class="mt-5 form-control pt-3 rounded-5">
+                <button id="btnId" class="btn btn-info mt-5 px-4 text-white rounded-5 ">Find</button>
+            </div>
+
+            <div class="row mt-5 gx-0 ">
+                <div class="col-md-4">
+                    <div class="caption ">
+                        <div class="head py-1 d-flex justify-content-between">
+                            <p id="dayWeak" class="ps-3"></p>
+                            <p><span id="dateNo">30</span><span class="month">January</span></p>
+                        </div>
+                        <div class="boodyy d-flex justify-content-between py-4">
+                            <div class="text ps-4">
+                                <p id="todayLocation">Cairo</p>
+                                <p id="todayTemp" class="fs-0 fw-bolder">12 <sup>0</sup>C</p>
+                            </div>
+                            <img src="img/21.png" id="cImageCondition" alt="helal" class="">
+                        </div>
+                        <p id="weatherDesc" class="ps-4 text-info">Partly Cloud</p>
+                        <div class="foot px-3 mx-2 py-2">
+                            <img src="img/photo4.png" alt="" width="20px">
+                            <span id="humidity">20%</span>
+
+                            <img src="img/photo5.png" alt="" width="20px">
+                            <span id="wind">km/h</span>
+
+                            <img src="img/photo6.png" alt="" width="20px">
+                            <span id="direction">East</span>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-4 text-center">
+                    <div class="captionn">
+                        <div class="headd py-1">
+                            <p class="" id="nDayWeak">Saturday</p>
+                        </div>
+                        <div class="boodyy py-5">
+                            <img src="img/21.png" id="nImageCondition" alt="helal" class="">
+                            <div class=" text ps-4">
+                                <p id="nDegree" class=" fs-1 fw-bolder"><sup>0</sup>C</p>
+                                <p id="minTemp" class="">12 <sup>0</sup></p>
+
+                            </div>
+                            <p id="nWeatherDesc" class=" ps-4 text-info">Partly Cloud</p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-4 text-center">
+                    <div class="caption">
+                        <div class="head py-1">
+                            <p class="" id="nnDayWeak">Sunday</p>
+                        </div>
+                        <div class="boodyy py-5">
+                            <img src="img/21.png" id="nnImageCondition" alt="" class="">
+                            <div class="text ps-4">
+                                <p id="nnnDegree" class=" fs-1 fw-bolder"> <sup>0</sup>C</p>
+                                <p id="nnMinTemp" class="">12 <sup>0</sup></p>
+                            </div>
+                            <p id="nnWeatherDesc" class=" ps-4 text-info">Partly Cloud</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="main.js "></script>
+
+</body>
+
+</html>
